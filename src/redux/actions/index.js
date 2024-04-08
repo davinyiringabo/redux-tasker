@@ -4,3 +4,7 @@ export const addTask = (task) => {
       payload: task,
     };
   };
+
+export const deleteTask = (state, action) =>{
+    return state.filter((task)=> task.id !== action.payload);
+}
